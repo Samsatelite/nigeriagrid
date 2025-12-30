@@ -14,7 +14,135 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      discos: {
+        Row: {
+          id: string
+          load_percent: number | null
+          name: string
+          short_name: string
+          status: string | null
+          trend: string | null
+          updated_at: string
+        }
+        Insert: {
+          id?: string
+          load_percent?: number | null
+          name: string
+          short_name: string
+          status?: string | null
+          trend?: string | null
+          updated_at?: string
+        }
+        Update: {
+          id?: string
+          load_percent?: number | null
+          name?: string
+          short_name?: string
+          status?: string | null
+          trend?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      grid_data: {
+        Row: {
+          created_at: string
+          frequency: number | null
+          generation_mw: number | null
+          id: string
+          load_percent: number | null
+          source: string | null
+          status: string | null
+        }
+        Insert: {
+          created_at?: string
+          frequency?: number | null
+          generation_mw?: number | null
+          id?: string
+          load_percent?: number | null
+          source?: string | null
+          status?: string | null
+        }
+        Update: {
+          created_at?: string
+          frequency?: number | null
+          generation_mw?: number | null
+          id?: string
+          load_percent?: number | null
+          source?: string | null
+          status?: string | null
+        }
+        Relationships: []
+      }
+      grid_news: {
+        Row: {
+          created_at: string
+          description: string | null
+          id: string
+          region: string | null
+          title: string
+          type: string | null
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          region?: string | null
+          title: string
+          type?: string | null
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          id?: string
+          region?: string | null
+          title?: string
+          type?: string | null
+        }
+        Relationships: []
+      }
+      power_reports: {
+        Row: {
+          address: string | null
+          created_at: string
+          downvotes: number
+          estimated_duration: string | null
+          id: string
+          latitude: number
+          longitude: number
+          region: string | null
+          status: string
+          upvotes: number
+          user_id: string | null
+        }
+        Insert: {
+          address?: string | null
+          created_at?: string
+          downvotes?: number
+          estimated_duration?: string | null
+          id?: string
+          latitude: number
+          longitude: number
+          region?: string | null
+          status: string
+          upvotes?: number
+          user_id?: string | null
+        }
+        Update: {
+          address?: string | null
+          created_at?: string
+          downvotes?: number
+          estimated_duration?: string | null
+          id?: string
+          latitude?: number
+          longitude?: number
+          region?: string | null
+          status?: string
+          upvotes?: number
+          user_id?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
